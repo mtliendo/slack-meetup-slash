@@ -2,7 +2,6 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const meetupInfoController = require('./controllers/meetup').meetupInfo
 
-const {PORT} = process.env
 const app = express()
 
 app.use(bodyParser.urlencoded({extended:true}))
