@@ -1,5 +1,5 @@
 const fetch = require('./qccoders-fetch')
-const URL = process.env.MEETUP_ENDPOINT
+const {MEETUP_ENDPOINT, DEFAULT_NAME} = process.env
 
 const formatCommands = (commands) => {
   let stringList = ''
@@ -22,8 +22,8 @@ const parseInfo = (meetupJSON) => {
   return {message, nextMeetupLink}
 }
 
-const getNextMeetup = (groupname='qccoders') => {
-    return fetch(`${URL}${groupname}`)
+const getNextMeetup = (groupname=DEFAULT_NAME) => {
+    return fetch(`${MEETUP_ENDPOINT}${groupname}`)
     .then(parseInfo)
     .catch(err => err)
 }
