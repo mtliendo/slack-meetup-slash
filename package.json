@@ -2,6 +2,9 @@
   "name": "slack-meetup-slash",
   "version": "1.0.0",
   "main": "index.js",
+  "engines": {
+    "node": ">=8.6.0"
+  },
   "repository": "https://github.com/mtliendo/slack-meetup-slash.git",
   "author": "Michael Liendo <model3volution@gmail.com>",
   "license": "MIT",
