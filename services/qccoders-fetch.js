@@ -1,6 +1,5 @@
-const axios = require('axios')
+const axios = require("axios");
 
-module.exports = (endpoint) => {
-  return axios.get(endpoint)
-    .then(res => res.data, e => e)
-}
+module.exports = endpoint => {
+  return axios.get(endpoint).then(res => res.data, e => e);
+};

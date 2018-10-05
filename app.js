@@ -1,11 +1,11 @@
-const express = require('express')
-const bodyParser = require('body-parser')
-const meetupInfoController = require('./controllers/meetup').meetupInfo
+const express = require("express");
+const bodyParser = require("body-parser");
+const meetupInfoController = require("./controllers/meetup").meetupInfo;
 
-const app = express()
+const app = express();
 
-app.use(bodyParser.urlencoded({extended:true}))
+app.use(bodyParser.urlencoded({ extended: true }));
 
-app.post('/meetup/next', meetupInfoController)
+app.post("/meetup/next", meetupInfoController);
 
-module.exports = app
+module.exports = app;

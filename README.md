@@ -10,18 +10,19 @@ Installing this project for contribution or for your team is relatively straight
 
 2. `yarn install` or `npm install` the dependencies.
 
-    * note that this package makes use of the spread operator, as such having a node version >= 8 is recommended.
+   - note that this package makes use of the spread operator, as such having a node version >= 8 is recommended.
 
-      **This will be enforced in later versions.**
+     **This will be enforced in later versions.**
 
 3. To prevent private or sensitive information being made available, this project makes use of the [dotenv package](https://github.com/motdotla/dotenv).
-    1. Create a `.env` file at the root of your application.
-    2. Setup your defaults:
 
-    NAME | VALUE
-    --- | ---
-    MEETUP_ENDPOINT | YOUR_ENDPOINT
-    PORT | 8080
+   1. Create a `.env` file at the root of your application.
+   2. Setup your defaults:
+
+   | NAME            | VALUE         |
+   | --------------- | ------------- |
+   | MEETUP_ENDPOINT | YOUR_ENDPOINT |
+   | PORT            | 8080          |
 
 That's it! You are now ready to either add to this repo or to integrate this with your own bot.
 
