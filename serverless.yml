@@ -1,0 +1,30 @@
+# Welcome to Serverless!
+#
+# This file is the main config file for your service.
+# It's very minimal at this point and uses default values.
+# You can always add more config options for more control.
+# We've included some commented out config examples here.
+# Just uncomment any of them to get that config option.
+#
+# For full config options, check the docs:
+#    docs.serverless.com
+#
+# Happy Coding!
+
+service: aquent-meetup # NOTE: update this with your service name
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+
+  # you can define service wide environment variables here
+  environment:
+    MEETUP_ENDPOINT: http://api.meetup.com/
+    DEFAULT_NAME: Quad-Cities-Linux-User-Group-QCLUG
+functions:
+  hello:
+    handler: lambda.handler # lambda.handler = fileName.exportedFuncName
+    events:
+      - http:
+          path: meetup/next # Must match app.js
+          method: post # Slack's slash commands must be registered as POST
